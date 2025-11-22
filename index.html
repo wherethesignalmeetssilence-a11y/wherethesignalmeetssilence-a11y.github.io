@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommentCraft AI - Smart YouTube Assistant</title>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0; padding: 0;
+            color: #333;
+            background-image: url('images/background.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            max-width: 800px;
+            width: 90%;
+            margin: 40px 20px;
+            text-align: center;
+        }
+        .logo { max-width: 120px; margin-bottom: 20px; }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        .subtitle { color: #555; font-size: 1.2em; margin-bottom: 30px; }
+        
+        /* Стилі для Landing Page (Вітрини) */
+        .features { text-align: left; margin: 30px 0; display: inline-block; }
+        .features li { margin-bottom: 10px; }
+        .pricing-card {
+            background: #f8f9fa; border: 1px solid #e9ecef;
+            padding: 20px; border-radius: 8px; margin: 20px 0;
+        }
+        .price { font-size: 2em; color: #28a745; font-weight: bold; }
+        .cta-button {
+            display: inline-block; background-color: #007bff; color: white;
+            padding: 12px 25px; text-decoration: none; border-radius: 5px;
+            font-weight: bold; margin-top: 20px;
+        }
+        .cta-button:hover { background-color: #0056b3; }
+
+        /* Футер з посиланнями */
+        .footer {
+            margin-top: 40px; padding-top: 20px;
+            border-top: 1px solid #eee; font-size: 0.9em; color: #666;
+        }
+        .footer a { color: #666; text-decoration: none; margin: 0 10px; }
+        .footer a:hover { text-decoration: underline; color: #007bff; }
+
+        /* Приховані блоки */
+        #payment-view { display: none; }
+        #landing-view { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="images/logo128.png" alt="CommentCraft AI Logo" class="logo">
+
+        <div id="landing-view">
+            <h1>CommentCraft AI</h1>
+            <p class="subtitle">The ultimate AI assistant for YouTube Creators & Viewers.</p>
+            
+            <div class="features">
+                <h3>Why Go Premium?</h3>
+                <ul>
+                    <li>✅ Unlimited AI Comment Generations</li>
+                    <li>✅ Custom AI Styles & Personas</li>
+                    <li>✅ <strong>Generate directly on YouTube Video Page</strong></li>
+                    <li>✅ <strong>Works inside YouTube Studio</strong></li>
+                    <li>✅ <strong>Smart Native Interface</strong> (Auto-adapts to your language)</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Premium License</h3>
+                <div class="price">$7.99</div>
+                <p>One-time payment. Lifetime access.</p>
+            </div>
+
+            <p>To upgrade, please click the <strong>"Upgrade" button inside the extension</strong>.</p>
+            
+            <div class="footer">
+                <p>&copy; 2025 CommentCraft AI. All rights reserved.</p>
+                <p>
+                    <a href="privacy.html">Privacy Policy</a> | 
+                    <a href="terms.html">Terms & Conditions</a> | 
+                    <a href="refund.html">Refund Policy</a>
+                </p>
+                <p>Contact: <a href="mailto:wherethesignalmeetssilence@gmail.com">wherethesignalmeetssilence@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div id="payment-view">
+            <h2 id="payment-title">Processing Payment...</h2>
+            <p id="payment-status">Please wait, initializing secure checkout via Paddle.</p>
+            <div class="footer">
+                <p>Secure payments by Paddle.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function setupPaddle() {
+            Paddle.Setup({
+                // !!! НЕ ЗАБУДЬ ПОВЕРНУТИ СЮДИ СВІЙ LIVE TOKEN !!!
+                token: "live_8fdde7bc3caf576067a8e00788a" 
+            });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const transactionId = urlParams.get('_ptxn');
+
+            if (transactionId) {
+                // --- РЕЖИМ ОПЛАТИ ---
+                document.getElementById('landing-view').style.display = 'none';
+                document.getElementById('payment-view').style.display = 'block';
+                
+                console.log('Transaction ID found:', transactionId);
+                
+                Paddle.Checkout.open({
+                    transactionId: transactionId,
+                    successCallback: function(data) {
+                        document.getElementById('payment-title').innerText = 'Payment Successful!';
+                        document.getElementById('payment-status').innerText = 'Your Premium features are now active. You can close this tab.';
+                    },
+                    closeCallback: function() {
+                        document.getElementById('payment-title').innerText = 'Payment Cancelled';
+                        document.getElementById('payment-status').innerText = 'Refresh the page to try again.';
+                    }
+                });
+            } else {
+                // --- РЕЖИМ ВІТРИНИ (Для перевірки Paddle) ---
+                document.getElementById('landing-view').style.display = 'block';
+                document.getElementById('payment-view').style.display = 'none';
+            }
+        }
+
+        if (window.Paddle) {
+            setupPaddle();
+        } else {
+            document.addEventListener('paddle:loaded', setupPaddle, false);
+        }
+    </script>
+</body>
+</html>
