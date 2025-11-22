@@ -8,50 +8,78 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5; /* Трохи зменшив висоту рядка */
             margin: 0; padding: 0;
             color: #333;
             background-image: url('images/background.jpg');
             background-size: cover; background-position: center; background-attachment: fixed;
             min-height: 100vh;
-            display: flex; flex-direction: column; align-items: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; /* Центруємо по вертикалі */
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.96);
+            padding: 30px; /* Зменшив відступи контейнера */
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            max-width: 800px;
+            max-width: 750px; /* Трохи зменшив ширину */
             width: 90%;
-            margin: 40px 20px;
+            margin: 20px;
             text-align: center;
         }
-        .logo { max-width: 120px; margin-bottom: 20px; }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        .subtitle { color: #555; font-size: 1.2em; margin-bottom: 30px; }
+        .logo { max-width: 100px; margin-bottom: 15px; } /* Зменшив лого і відступ */
+        h1 { color: #2c3e50; margin: 0 0 5px 0; font-size: 1.8em; } /* Компактніший заголовок */
+        .subtitle { color: #555; font-size: 1.1em; margin: 0 0 25px 0; }
         
-        /* Стилі для Landing Page (Вітрини) */
-        .features { text-align: left; margin: 30px 0; display: inline-block; }
-        .features li { margin-bottom: 10px; }
+        /* --- НОВИЙ БЛОК: Сітка для двох колонок --- */
+        .content-grid {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px; /* Відстань між колонками */
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        /* Ліва колонка (Переваги) */
+        .features-col {
+            flex: 1; /* Займає доступний простір */
+        }
+        .features-col h3 { margin-top: 0; color: #2c3e50; }
+        .features-col ul { padding-left: 20px; margin: 10px 0; }
+        .features-col li { margin-bottom: 8px; } /* Щільніший список */
+
+        /* Права колонка (Ціна) */
+        .pricing-col {
+            flex: 0 0 220px; /* Фіксована ширина для картки ціни */
+            display: flex; flex-direction: column; justify-content: center;
+        }
         .pricing-card {
             background: #f8f9fa; border: 1px solid #e9ecef;
-            padding: 20px; border-radius: 8px; margin: 20px 0;
+            padding: 20px; border-radius: 8px;
+            text-align: center;
+            height: 100%; /* Розтягуємо на всю висоту колонки */
+            box-sizing: border-box;
         }
-        .price { font-size: 2em; color: #28a745; font-weight: bold; }
-        .cta-button {
-            display: inline-block; background-color: #007bff; color: white;
-            padding: 12px 25px; text-decoration: none; border-radius: 5px;
-            font-weight: bold; margin-top: 20px;
-        }
-        .cta-button:hover { background-color: #0056b3; }
+        .pricing-card h3 { margin-top: 0; }
+        .price { font-size: 2em; color: #28a745; font-weight: bold; line-height: 1.2; }
+        /* ----------------------------------------- */
 
-        /* Футер з посиланнями */
+        .instruction { font-weight: 500; margin-bottom: 0; }
+
+        /* Футер */
         .footer {
-            margin-top: 40px; padding-top: 20px;
-            border-top: 1px solid #eee; font-size: 0.9em; color: #666;
+            margin-top: 20px; padding-top: 15px; /* Зменшив відступи футера */
+            border-top: 1px solid #eee; font-size: 0.85em; color: #666;
         }
-        .footer a { color: #666; text-decoration: none; margin: 0 10px; }
+        .footer p { margin: 5px 0; }
+        .footer a { color: #666; text-decoration: none; margin: 0 8px; }
         .footer a:hover { text-decoration: underline; color: #007bff; }
+
+        /* Адаптивність для мобільних (стовпчики стають один під одним) */
+        @media (max-width: 650px) {
+            .content-grid { flex-direction: column; gap: 20px; text-align: center; }
+            .features-col { text-align: left; display: inline-block; }
+            .pricing-col { width: 100%; flex: auto; }
+        }
 
         /* Приховані блоки */
         #payment-view { display: none; }
@@ -65,35 +93,37 @@
 
         <div id="landing-view">
             <h1>CommentCraft AI</h1>
-            <p class="subtitle">The ultimate AI assistant for YouTube Creators & Viewers.</p>
+            <p class="subtitle">The ultimate AI assistant for YouTube.</p>
             
-            <div class="features">
-                <h3>Why Go Premium?</h3>
-                <ul>
-                    <li>✅ Unlimited AI Comment Generations</li>
-                    <li>✅ Custom AI Styles & Personas</li>
-                    <li>✅ <strong>Generate directly on YouTube Video Page</strong></li>
-                    <li>✅ <strong>Works inside YouTube Studio</strong></li>
-                    <li>✅ <strong>Smart Native Interface</strong> (Auto-adapts to your language)</li>
-                </ul>
+            <div class="content-grid">
+                <div class="features-col">
+                    <h3>Why Go Premium?</h3>
+                    <ul>
+                        <li>✅ Unlimited AI Comment Generations</li>
+                        <li>✅ Custom AI Styles & Personas</li>
+                        <li>✅ <strong>Generate on Video Page & Studio</strong></li>
+                        <li>✅ <strong>Smart Native Interface</strong> (Auto-adapts)</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-col">
+                    <div class="pricing-card" id="pricing">
+                        <h3>Premium License</h3>
+                        <div class="price">$7.99</div>
+                        <p>One-time payment.<br>Lifetime access.</p>
+                    </div>
+                </div>
             </div>
 
-			<div class="pricing-card" id="pricing">
-                <h3>Premium License</h3>
-                <div class="price">$7.99</div>
-                <p>One-time payment. Lifetime access.</p>
-            </div>
-
-            <p>To upgrade, please click the <strong>"Upgrade" button inside the extension</strong>.</p>
+            <p class="instruction">To upgrade, please click the <strong>"Upgrade" button inside the extension</strong>.</p>
             
             <div class="footer">
-                <p>&copy; 2025 CommentCraft AI. All rights reserved.</p>
                 <p>
                     <a href="privacy.html">Privacy Policy</a> | 
                     <a href="terms.html">Terms & Conditions</a> | 
                     <a href="refund.html">Refund Policy</a>
                 </p>
-                <p>Contact: <a href="mailto:wherethesignalmeetssilence@gmail.com">wherethesignalmeetssilence@gmail.com</a></p>
+                <p>Contact: <a href="mailto:wherethesignalmeetssilence@gmail.com">wherethesignalmeetssilence@gmail.com</a> | &copy; 2025 CommentCraft AI</p>
             </div>
         </div>
 
