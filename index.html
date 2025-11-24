@@ -17,7 +17,7 @@
             display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.98); /* Менш прозорий для чіткості */
+            background-color: rgba(255, 255, 255, 0.98);
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -30,7 +30,7 @@
         h1 { color: #2c3e50; margin: 0 0 5px 0; font-size: 1.8em; }
         .subtitle { color: #555; font-size: 1.1em; margin: 0 0 20px 0; font-weight: bold; }
         
-        /* --- НОВИЙ БЛОК: Опис продукту (Вимога Paddle) --- */
+        /* --- Опис продукту --- */
         .product-description {
             text-align: left;
             background-color: #f1f8ff;
@@ -40,6 +40,7 @@
             font-size: 0.95em;
             color: #444;
         }
+        .product-description strong { color: #2c3e50; }
 
         /* Сітка для колонок */
         .content-grid {
@@ -50,10 +51,18 @@
             margin-bottom: 25px;
             text-align: left;
         }
-        .features-col { flex: 1; }
-        .features-col h3 { margin-top: 0; color: #2c3e50; font-size: 1.1em;}
-        .features-col ul { padding-left: 20px; margin: 10px 0; }
-        .features-col li { margin-bottom: 8px; font-size: 0.95em; }
+        .features-col { flex: 1; display: flex; align-items: center; }
+        .features-col ul { padding-left: 5px; margin: 0; list-style: none; }
+        .features-col li { margin-bottom: 12px; font-size: 0.95em; }
+        
+        /* Стиль для мітки Premium Only */
+        .premium-tag {
+            color: #e67e22; /* Помаранчевий колір */
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-left: 5px;
+            text-transform: uppercase;
+        }
 
         .pricing-col {
             flex: 0 0 220px;
@@ -82,11 +91,10 @@
 
         @media (max-width: 650px) {
             .content-grid { flex-direction: column; gap: 20px; text-align: center; }
-            .features-col { text-align: left; display: inline-block; }
+            .features-col { text-align: left; display: block; }
             .pricing-col { width: 100%; flex: auto; }
         }
 
-        /* --- ВАЖЛИВА ЗМІНА: Відображаємо Landing за замовчуванням --- */
         #landing-view { display: block; } 
         #payment-view { display: none; }
     </style>
@@ -102,17 +110,19 @@
 
             <div class="product-description">
                 <strong>What is CommentCraft AI?</strong><br>
-                CommentCraft AI is a Google Chrome Extension designed to help YouTube Creators and Viewers save time. It integrates directly into the YouTube interface to generate engaging comments, smart replies, and optimize video tags using advanced Artificial Intelligence.
+                CommentCraft AI is your essential AI co-pilot for YouTube, designed for both content creators and active viewers. It seamlessly integrates powerful AI tools directly into the YouTube interface to save you time.<br><br>
+                <strong>Innovative Language Support:</strong> The interface automatically adapts to your browser's language (English, Spanish, Ukrainian, etc.) for a truly native experience.<br>
+                <strong>Free vs. Premium:</strong> The Free version offers 10 daily generations to try the core features. The Premium version unlocks <strong>Unlimited Power</strong> and the full Creator Toolkit.
             </div>
             
             <div class="content-grid">
                 <div class="features-col">
-                    <h3>Key Features:</h3>
                     <ul>
-                        <li>✅ <strong>Unlimited Generation:</strong> Create comments & replies instantly.</li>
-                        <li>✅ <strong>Smart Integration:</strong> Works directly on YouTube video pages and Studio.</li>
+                        <li>✅ <strong>Unlimited Generation:</strong> Create comments & replies instantly. <span class="premium-tag">(Premium Only)</span></li>
+                        <li>✅ <strong>Smart Integration:</strong> Works directly on YouTube video pages and Studio. <span class="premium-tag">(Premium Only)</span></li>
                         <li>✅ <strong>Custom Styles:</strong> Make AI sound exactly like you.</li>
                         <li>✅ <strong>Native Interface:</strong> Automatically adapts to your language.</li>
+                        <li>✅ <strong>Bonus Utilities:</strong> Dislike counter & distraction-free mode.</li>
                     </ul>
                 </div>
 
@@ -175,7 +185,6 @@
                     }
                 });
             } 
-            // Якщо транзакції немає - ми нічого не робимо, бо Landing вже visible (display: block)
         }
 
         if (window.Paddle) {
