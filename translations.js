@@ -2,11 +2,19 @@ const translations = {
     en: {
         "nav_home": "Home", "nav_terms": "Terms", "nav_privacy": "Privacy", "nav_refund": "Refund Policy",
         "idx_title": "CommentCraft AI", "idx_btn_buy": "Upgrade to Premium",
-        "idx_desc": "The ultimate assistant for content creators. Instantly write comments, get tag suggestions, and analyze video data directly on YouTube.",
-        "feat1_title": "Smart AI Comments & Replies", "feat1_desc": "Generate context-aware comments in various tones (humorous, witty, grateful, ironic) or create your own custom style.",
-        "feat2_title": "Seamless YouTube Integration", "feat2_desc": "AI generation buttons are embedded directly into the YouTube player and comment sections for a lightning-fast workflow.",
-        "feat3_title": "Video Insights & Dislike Counter", "feat3_desc": "Extract hidden video tags, descriptions, and bring back the exact YouTube Dislike counter right under the video.",
-        "feat4_title": "Bring Your Own Key & Clean UI", "feat4_desc": "Connect your own OpenAI or Gemini API keys. Easily hide distracting YouTube recommendations.",
+        "idx_desc": "The ultimate AI assistant for YouTube creators and viewers. Instantly generate engaging comments, translate text, optimize SEO tags, and analyze video data.",
+        
+        "feat1_title": "Smart AI Comments, Replies & Translation", 
+        "feat1_desc": "Craft context-aware responses in various tones (humorous, professional, custom) and instantly translate comments to overcome language barriers.",
+        
+        "feat2_title": "Seamless YouTube & Studio Integration", 
+        "feat2_desc": "AI buttons are injected directly into the standard YouTube interface and YouTube Studio, ensuring a lightning-fast workflow for managing your channel.",
+        
+        "feat3_title": "SEO Optimization & Dislike Counter", 
+        "feat3_desc": "Generate optimized video descriptions and tags based on content. Plus, bring back the exact YouTube Dislike counter right under the video.",
+        
+        "feat4_title": "Multi-Model AI, Focus & Dark Mode", 
+        "feat4_desc": "Bring your own API keys for OpenAI, Gemini, or ultra-fast Groq. Enable Dark Mode and hide distracting recommendations for pure focus.",
         
         "priv_title": "Privacy Policy", "priv_date": "Effective Date: November 2025", "priv_intro": "This Privacy Policy describes how the CommentCraft AI Chrome Extension collects, uses, and handles your data.",
         "priv_h1": "1. What Data We Collect", "priv_p1": "We collect your Google Account email address only to link your Premium license. We also temporarily access video metadata (title, tags) to generate context-aware AI comments, but this is not stored.",
@@ -25,16 +33,24 @@ const translations = {
         "ref_h3": "Transaction Cancellation", "ref_p3": "You can cancel your payment transaction at any point before confirming it on the payment gateway page. Once the payment is completed, you are covered by our 14-day refund policy.",
 
         "contact_title": "Contact Information", 
-        "contact_details": "<strong>Company / Individual Entrepreneur:</strong> FOP [Ваше ПІБ / Your Name]<br><strong>ITN (Tax ID):</strong> [Ваш ІПН / Your ITN]<br><strong>Legal & Physical Address:</strong> [Ваша адреса / Your Address]<br><strong>Phone:</strong> [Ваш телефон / Your Phone]<br><strong>Email:</strong> wherethesignalmeetssilence@gmail.com"
+        "contact_details": "<strong>Company / Individual Entrepreneur:</strong> FOP Semenik T.P.<br><strong>ITN (Tax ID):</strong> 2834705265<br><strong>Legal & Physical Address:</strong> Kyiv region, Baryshivka, Bohdana Khmelnytskoho str., 18, apt. 45, Ukraine<br><strong>Phone:</strong> 096661720<br><strong>Email:</strong> wherethesignalmeetssilence@gmail.com"
     },
     uk: {
         "nav_home": "Головна", "nav_terms": "Умови", "nav_privacy": "Конфіденційність", "nav_refund": "Повернення коштів",
         "idx_title": "CommentCraft AI", "idx_btn_buy": "Оновити до Premium",
-        "idx_desc": "Незамінний помічник для авторів контенту. Миттєво пишіть коментарі, отримуйте теги та аналізуйте відео безпосередньо на YouTube.",
-        "feat1_title": "Розумні ШІ-коментарі та відповіді", "feat1_desc": "Генеруйте контекстні коментарі у різних стилях (гумористичному, дотепному, вдячному) або створіть власний тон.",
-        "feat2_title": "Безшовна інтеграція з YouTube", "feat2_desc": "Кнопки ШІ-генерації вбудовуються безпосередньо в інтерфейс плеєра та розділ коментарів для блискавичної роботи.",
-        "feat3_title": "Аналітика та лічильник дизлайків", "feat3_desc": "Витягуйте приховані теги, описи та поверніть точний лічильник дизлайків YouTube прямо під відео.",
-        "feat4_title": "Власні API-ключі та чистий UI", "feat4_desc": "Підключайте власні ключі OpenAI або Gemini. Приховуйте відволікаючі рекомендації YouTube.",
+        "idx_desc": "Ультимативний ШІ-помічник для авторів та глядачів YouTube. Миттєво генеруйте коментарі, перекладайте текст, оптимізуйте SEO та аналізуйте відео.",
+        
+        "feat1_title": "Розумні коментарі, відповіді та переклад", 
+        "feat1_desc": "Створюйте контекстні відповіді у різних стилях (гумор, профі, власний тон) та миттєво перекладайте коментарі, долаючи мовні бар'єри.",
+        
+        "feat2_title": "Глибока інтеграція з YouTube та Studio", 
+        "feat2_desc": "Кнопки ШІ вбудовуються прямо в стандартний інтерфейс YouTube та YouTube Studio, забезпечуючи блискавичне керування вашим каналом.",
+        
+        "feat3_title": "SEO-оптимізація та лічильник дизлайків", 
+        "feat3_desc": "Генеруйте оптимізовані описи та теги для відео. А також поверніть точний лічильник дизлайків прямо під плеєром.",
+        
+        "feat4_title": "Кілька ШІ-моделей, Фокус та Нічний режим", 
+        "feat4_desc": "Використовуйте власні ключі OpenAI, Gemini або надшвидкого Groq. Увімкніть нічний режим та приховайте відволікаючі рекомендації.",
         
         "priv_title": "Політика конфіденційності", "priv_date": "Дата набуття чинності: Листопад 2025", "priv_intro": "Ця Політика описує, як розширення CommentCraft AI збирає, використовує та обробляє ваші дані.",
         "priv_h1": "1. Які дані ми збираємо", "priv_p1": "Ми збираємо email вашого Google-акаунта виключно для прив'язки Premium-ліцензії. Ми також тимчасово отримуємо доступ до метаданих відео (заголовок, теги) для генерації коментарів, але ці дані не зберігаються.",
@@ -53,16 +69,24 @@ const translations = {
         "ref_h3": "Скасування транзакції", "ref_p3": "Ви можете скасувати транзакцію на будь-якому етапі до моменту її остаточного підтвердження на сторінці платіжної системи. Після успішної оплати діють умови 14-денного повернення коштів.",
 
         "contact_title": "Контактна інформація", 
-        "contact_details": "<strong>ФОП:</strong> [Ваше ПІБ]<br><strong>ІПН:</strong> [Ваш ІПН]<br><strong>Юридична та фактична адреса:</strong> [Ваша адреса]<br><strong>Телефон:</strong> [Ваш телефон]<br><strong>Email:</strong> wherethesignalmeetssilence@gmail.com"
+        "contact_details": "<strong>ФОП:</strong> Семенік Т.П.<br><strong>ІПН:</strong> 2834705265<br><strong>Юридична та фактична адреса:</strong> Київська обл., смт. Баришівка, вул. Богдана Хмельницького, буд. 18, кв. 45<br><strong>Телефон:</strong> 096661720<br><strong>Email:</strong> wherethesignalmeetssilence@gmail.com"
     },
     fr: {
         "nav_home": "Accueil", "nav_terms": "Conditions", "nav_privacy": "Confidentialité", "nav_refund": "Remboursement",
         "idx_title": "CommentCraft AI", "idx_btn_buy": "Passer à Premium",
-        "idx_desc": "L'assistant indispensable pour les créateurs. Rédigez des commentaires, obtenez des tags et analysez les vidéos sur YouTube.",
-        "feat1_title": "Commentaires IA intelligents", "feat1_desc": "Générez des commentaires avec différents tons (humoristique, spirituel) ou créez votre propre style.",
-        "feat2_title": "Intégration YouTube fluide", "feat2_desc": "Les boutons IA sont intégrés directement dans le lecteur YouTube pour un flux de travail rapide.",
-        "feat3_title": "Analyse et compteur Dislikes", "feat3_desc": "Extrayez les tags et rétablissez le compteur exact de \"Je n'aime pas\" sous la vidéo.",
-        "feat4_title": "Vos clés API et interface épurée", "feat4_desc": "Connectez vos clés OpenAI ou Gemini. Masquez les recommandations YouTube distrayantes.",
+        "idx_desc": "L'assistant IA ultime pour les créateurs et spectateurs YouTube. Générez des commentaires, traduisez, optimisez le SEO et analysez les vidéos.",
+        
+        "feat1_title": "Commentaires IA, Réponses & Traduction", 
+        "feat1_desc": "Créez des réponses contextuelles dans divers tons (humour, pro, personnalisé) et traduisez instantanément pour surmonter les barrières linguistiques.",
+        
+        "feat2_title": "Intégration YouTube & Studio fluide", 
+        "feat2_desc": "Les boutons IA s'intègrent directement dans le lecteur YouTube et YouTube Studio, garantissant une gestion ultra-rapide de votre chaîne.",
+        
+        "feat3_title": "Optimisation SEO & Compteur Dislikes", 
+        "feat3_desc": "Générez des descriptions et tags optimisés. De plus, rétablissez le compteur exact de \"Je n'aime pas\" sous la vidéo.",
+        
+        "feat4_title": "IA Multi-modèles, Focus & Mode Sombre", 
+        "feat4_desc": "Utilisez vos clés API OpenAI, Gemini ou le très rapide Groq. Activez le mode sombre et masquez les recommandations distrayantes.",
         
         "priv_title": "Politique de confidentialité", "priv_date": "Date d'effet : Novembre 2025", "priv_intro": "Cette politique décrit comment l'extension CommentCraft AI collecte et utilise vos données.",
         "priv_h1": "1. Données collectées", "priv_p1": "Nous collectons votre e-mail Google uniquement pour lier votre licence Premium. Nous accédons temporairement aux métadonnées vidéo pour l'IA, mais elles ne sont pas stockées.",
@@ -81,16 +105,24 @@ const translations = {
         "ref_h3": "Annulation de transaction", "ref_p3": "Vous pouvez annuler la transaction à tout moment avant sa confirmation sur la page de paiement. Une fois payé, la politique de 14 jours s'applique.",
 
         "contact_title": "Coordonnées", 
-        "contact_details": "<strong>Entreprise :</strong> FOP [Ваше ПІБ]<br><strong>Numéro d'identification :</strong> [Ваш ІПН]<br><strong>Adresse :</strong> [Ваша адреса]<br><strong>Téléphone :</strong> [Ваш телефон]<br><strong>E-mail :</strong> wherethesignalmeetssilence@gmail.com"
+        "contact_details": "<strong>Entreprise :</strong> FOP Semenik T.P.<br><strong>Numéro d'identification :</strong> 2834705265<br><strong>Adresse :</strong> Région de Kiev, Barychivka, rue Bohdana Khmelnytskoho, 18, app. 45, Ukraine<br><strong>Téléphone :</strong> 096661720<br><strong>E-mail :</strong> wherethesignalmeetssilence@gmail.com"
     },
     de: {
         "nav_home": "Startseite", "nav_terms": "AGB", "nav_privacy": "Datenschutz", "nav_refund": "Rückerstattung",
         "idx_title": "CommentCraft AI", "idx_btn_buy": "Auf Premium upgraden",
-        "idx_desc": "Der unverzichtbare Assistent für Creator. Schreiben Sie Kommentare und analysieren Sie Videos auf YouTube.",
-        "feat1_title": "Smarte KI-Kommentare", "feat1_desc": "Generieren Sie Kommentare in verschiedenen Tönen oder erstellen Sie Ihren eigenen Stil.",
-        "feat2_title": "Nahtlose Integration", "feat2_desc": "KI-Buttons sind für einen schnellen Workflow direkt in den YouTube-Player integriert.",
-        "feat3_title": "Video-Insights & Dislike-Zähler", "feat3_desc": "Extrahieren Sie Tags und bringen Sie den genauen Dislike-Zähler zurück.",
-        "feat4_title": "Eigene API-Keys & sauberes UI", "feat4_desc": "Verbinden Sie Ihre OpenAI- oder Gemini-Keys. Blenden Sie Empfehlungen aus.",
+        "idx_desc": "Der ultimative KI-Assistent für Creator und Zuschauer. Generieren Sie Kommentare, übersetzen Sie Texte, optimieren Sie SEO und analysieren Sie Videos.",
+        
+        "feat1_title": "Smarte KI-Kommentare, Antworten & Übersetzung", 
+        "feat1_desc": "Erstellen Sie kontextbezogene Antworten in verschiedenen Tönen und übersetzen Sie Kommentare sofort, um Sprachbarrieren zu überwinden.",
+        
+        "feat2_title": "Nahtlose YouTube & Studio Integration", 
+        "feat2_desc": "KI-Buttons werden direkt in die normale YouTube-Oberfläche und in YouTube Studio integriert für einen blitzschnellen Workflow.",
+        
+        "feat3_title": "SEO-Optimierung & Dislike-Zähler", 
+        "feat3_desc": "Generieren Sie optimierte Videobeschreibungen und Tags. Außerdem bringen wir den genauen Dislike-Zähler zurück.",
+        
+        "feat4_title": "Multi-Modell KI, Fokus & Dark Mode", 
+        "feat4_desc": "Nutzen Sie Ihre eigenen API-Keys für OpenAI, Gemini oder das ultraschnelle Groq. Aktivieren Sie den Dark Mode und blenden Sie Empfehlungen aus.",
         
         "priv_title": "Datenschutzerklärung", "priv_date": "Gültig ab: November 2025", "priv_intro": "Diese Richtlinie beschreibt, wie die Erweiterung Ihre Daten sammelt und verwendet.",
         "priv_h1": "1. Erhobene Daten", "priv_p1": "Wir erfassen Ihre Google-E-Mail nur für die Premium-Lizenz. Videometadaten werden nur temporär für die KI verwendet.",
@@ -109,16 +141,24 @@ const translations = {
         "ref_h3": "Stornierung der Transaktion", "ref_p3": "Sie können die Transaktion jederzeit vor der Bestätigung auf der Zahlungsseite abbrechen. Nach der Zahlung gilt die 14-tägige Rückerstattungsrichtlinie.",
 
         "contact_title": "Kontaktinformationen", 
-        "contact_details": "<strong>Unternehmen:</strong> FOP [Ваше ПІБ]<br><strong>Steuernummer:</strong> [Ваш ІПН]<br><strong>Adresse:</strong> [Ваша адреса]<br><strong>Telefon:</strong> [Ваш телефон]<br><strong>E-Mail:</strong> wherethesignalmeetssilence@gmail.com"
+        "contact_details": "<strong>Unternehmen:</strong> FOP Semenik T.P.<br><strong>Steuernummer:</strong> 2834705265<br><strong>Adresse:</strong> Region Kiew, Baryschiwka, Bohdana-Chmelnyzkoho-Str. 18, Whg. 45, Ukraine<br><strong>Telefon:</strong> 096661720<br><strong>E-Mail:</strong> wherethesignalmeetssilence@gmail.com"
     },
     pl: {
         "nav_home": "Główna", "nav_terms": "Regulamin", "nav_privacy": "Prywatność", "nav_refund": "Zwroty",
         "idx_title": "CommentCraft AI", "idx_btn_buy": "Przejdź na Premium",
-        "idx_desc": "Niezbędny asystent twórcy. Błyskawicznie pisz komentarze i analizuj wideo na YouTube.",
-        "feat1_title": "Komentarze AI", "feat1_desc": "Generuj komentarze w różnych tonach (zabawny, błyskotliwy) lub stwórz własny styl.",
-        "feat2_title": "Integracja z YouTube", "feat2_desc": "Przyciski AI są wbudowane bezpośrednio w odtwarzacz YouTube, zapewniając szybką pracę.",
-        "feat3_title": "Analiza wideo i Dislike", "feat3_desc": "Wyodrębnij tagi i przywróć dokładny licznik łapek w dół pod wideo.",
-        "feat4_title": "Własne klucze API", "feat4_desc": "Podłącz własne klucze OpenAI lub Gemini. Ukryj rozpraszające rekomendacje.",
+        "idx_desc": "Ostateczny asystent AI dla twórców i widzów YouTube. Błyskawicznie generuj komentarze, tłumacz teksty, optymalizuj SEO i analizuj wideo.",
+        
+        "feat1_title": "Inteligentne Komentarze, Odpowiedzi i Tłumaczenia", 
+        "feat1_desc": "Twórz kontekstowe odpowiedzi w różnych tonach (humor, pro, własny styl) i natychmiast tłumacz komentarze, aby pokonać bariery językowe.",
+        
+        "feat2_title": "Płynna Integracja z YouTube i Studio", 
+        "feat2_desc": "Przyciski AI są wbudowane bezpośrednio w standardowy interfejs YouTube oraz YouTube Studio, zapewniając błyskawiczne zarządzanie kanałem.",
+        
+        "feat3_title": "Optymalizacja SEO i Licznik Dislike", 
+        "feat3_desc": "Generuj zoptymalizowane opisy wideo i tagi. Dodatkowo przywracamy dokładny licznik łapek w dół pod filmem.",
+        
+        "feat4_title": "Wiele Modeli AI, Tryb Skupienia i Ciemny", 
+        "feat4_desc": "Używaj własnych kluczy API OpenAI, Gemini lub ultraszybkiego Groq. Włącz tryb ciemny i ukryj rozpraszające rekomendacje.",
         
         "priv_title": "Polityka prywatności", "priv_date": "Data: Listopad 2025", "priv_intro": "Niniejsza polityka opisuje, jak rozszerzenie gromadzi i wykorzystuje Twoje dane.",
         "priv_h1": "1. Jakie dane zbieramy", "priv_p1": "Zbieramy Twój e-mail Google wyłącznie do powiązania licencji Premium. Metadane wideo są przetwarzane tymczasowo.",
@@ -137,6 +177,6 @@ const translations = {
         "ref_h3": "Anulowanie transakcji", "ref_p3": "Możesz anulować transakcję w dowolnym momencie przed jej potwierdzeniem na stronie płatności. Po przetworzeniu płatności obowiązuje 14-dniowa polityka zwrotów.",
 
         "contact_title": "Informacje kontaktowe", 
-        "contact_details": "<strong>Firma:</strong> FOP [Ваше ПІБ]<br><strong>NIP:</strong> [Ваш ІПН]<br><strong>Adres:</strong> [Ваша адреса]<br><strong>Telefon:</strong> [Ваш телефон]<br><strong>Email:</strong> wherethesignalmeetssilence@gmail.com"
+        "contact_details": "<strong>Firma:</strong> FOP Semenik T.P.<br><strong>NIP:</strong> 2834705265<br><strong>Adres:</strong> obwód kijowski, Baryszówka, ul. Bohdana Chmielnickiego 18, m. 45, Ukraina<br><strong>Telefon:</strong> 096661720<br><strong>Email:</strong> wherethesignalmeetssilence@gmail.com"
     }
 };
